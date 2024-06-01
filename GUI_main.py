@@ -24,7 +24,7 @@ fn = ""
 
 root = tk.Tk()
 
-root.title("Face Authantication")
+root.title(" IMAGE STEGNOGRAPHY ")
 root.geometry("1600x900")
 w, h = root.winfo_screenwidth(), root.winfo_screenheight()
 
@@ -101,7 +101,7 @@ def shift():
 
 canvas=Canvas(root,bg="#A2D9CE")
 canvas.pack()
-text_var="Face Authantication"
+text_var="Image Stegnography"
 text=canvas.create_text(0,-2000,text=text_var,font=('Algerian',25,'bold'),fill='white',tags=("marquee",),anchor='w')
 x1,y1,x2,y2 = canvas.bbox("marquee")
 width = 1600
@@ -134,12 +134,7 @@ w.after(100, lambda:marquee_fun(w, 150, 30, 500, 500, 'right', 2))
 from tkinter import messagebox as ms
 
 
-def Login():
-    from subprocess import call
-    call(["python","login.py"])
-def Register():
-    from subprocess import call
-    call(["python","registration.py"])
+   
     
 def Stegnography():
     from subprocess import call
@@ -151,21 +146,16 @@ root.geometry("%dx%d+0+0"%(w,h))
 root.configure(background="#17202A")
 '''
 
-wlcm=tk.Label(root,text="********Face authentication allows users to unlock their device simply by looking at the front of their device*********",font=("Roboto",14,"bold"))
+wlcm=tk.Label(root,text="******** authentication allows users to hide their information behind image so anyone cannot steal your important information*********",font=("Roboto",15,"bold"))
 wlcm.place(x=200,y=640)
 
 
 
 
-d2=tk.Button(root,text="Login",command=Login,width=13,height=1,bd=0,background="#A2D9CE",foreground="white",font=("times new roman",13,"bold"))
-d2.place(x=1150,y=70)
 
-
-d3=tk.Button(root,text="Register",command=Register,width=13,height=1,bd=0,background="#A2D9CE",foreground="white",font=("times new roman",13,"bold"))
-d3.place(x=1250,y=70)
 
 d3=tk.Button(root,text="Stegnography",command=Stegnography,width=13,height=1,bd=0,background="#A2D9CE",foreground="white",font=("times new roman",13,"bold"))
-d3.place(x=1000,y=70)
+d3.place(x=1000,y=170)
 
 
 root.mainloop()
